@@ -1,0 +1,214 @@
+.register-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(10, 10, 25, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.4);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.role-switch {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.role-switch button {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.role-switch button.active {
+  background: #007bff;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-row input::placeholder {
+  color: #aaa;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.small-input {
+  width: 100px;
+}
+
+.otp-container {
+  text-align: center;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.otp-inputs input {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Bounce animation */
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bounce {
+  animation: bounceSlow 1.5s infinite ease-in-out;
+  animation-delay: var(--delay, 0s);
+}
+
+.bounce-all {
+  animation: bounceSlow 1s infinite ease-in-out;
+}
+
+/* ===============================
+   Responsive Adjustments
+=============================== */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 25px;
+    margin: 50px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .small-input {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .otp-inputs input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .role-switch button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+    margin: 40px 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .otp-inputs input {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .role-switch button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-container {
+    padding: 15px;
+    margin: 30px 10px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .otp-inputs input {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .role-switch button {
+    padding: 5px 10px; 
+    font-size: 12px;
+  }
+}

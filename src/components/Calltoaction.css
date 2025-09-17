@@ -1,0 +1,141 @@
+.calltoaction {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Skeleton Loader Styles */
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #333 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Skeleton Variants */
+.skeleton-title {
+  width: 100px;
+  height: 3rem;
+}
+
+.skeleton-subtitle {
+  width: 160px;
+  height: 1.5rem;
+}
+
+.skeleton-text {
+  width: 50%;
+  height: 1.25rem;
+}
+
+.skeleton-agency {
+  width: 30%;
+  height: 1.25rem;
+}
+
+/* Left Column */
+.cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 6vw, 6rem); /* responsive */
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.cta-subtitle {
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #a855f7;
+  letter-spacing: 0.05em;
+}
+
+/* Right Column */
+.cta-right {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cta-text,
+.cta-agency {
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  word-break: break-word;
+}
+
+.cta-agency {
+  font-weight: 700;
+}
+
+.cta-arrow {
+  margin-left: 0.25rem;
+  transform: translate(-2px, -4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-item:hover .cta-arrow {
+  opacity: 1;
+}
+
+/* ✅ Responsive Breakpoints */
+@media (min-width: 768px) {
+  .cta-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  .cta-left {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .cta-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-text,
+  .cta-agency {
+    font-size: 1rem;
+  }
+}

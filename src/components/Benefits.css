@@ -1,0 +1,81 @@
+.animated-benefits-section {
+  min-height: 60vh;
+  background: linear-gradient(135deg, #090909, #091317, #000000);
+  color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.animated-benefits-section h2 {
+  margin-bottom: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00fff7;
+  filter: drop-shadow(0 0 10px #00fff7);
+  font-size: clamp(1.5rem, 5vw, 3rem); /* More fluid sizing */
+  line-height: 1.2;
+}
+
+.animated-benefits-section p {
+  max-width: 800px;
+  color: #00ced1;
+  filter: drop-shadow(0 0 5px #00ced1);
+  font-size: clamp(1rem, 3vw, 1.5rem); /* More flexible */
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* ✅ Tablet Devices */
+@media (max-width: 992px) {
+  .animated-benefits-section {
+    padding: 30px 15px;
+  }
+
+  .animated-benefits-section h2 {
+    font-size: 2rem;
+  }
+
+  .animated-benefits-section p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ✅ Mobile Devices */
+@media (max-width: 600px) {
+  .animated-benefits-section {
+    padding: 20px 10px;
+  }
+
+  .animated-benefits-section h2 {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .animated-benefits-section p {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Extra Small Devices (<400px) */
+@media (max-width: 400px) {
+  .animated-benefits-section {
+    padding: 15px 8px;
+  }
+
+  .animated-benefits-section h2 {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .animated-benefits-section p {
+    font-size: 0.95rem;
+  }
+}

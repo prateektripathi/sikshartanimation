@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.tracks-section {
+  background-color: #000;
+  color: #c1c6ff;
+  padding: 4rem 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.tracks-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* responsive */
+  margin-bottom: 3rem;
+  letter-spacing: 0.2rem;
+  color: #5ee5ff;
+}
+
+.tracks-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Panel */
+.tracks-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.track-tab {
+  border: 1px solid #2ac0e5;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: #111;
+  box-shadow: 0 0 10px #2ac0e533;
+  text-align: center;
+}
+
+.track-tab:hover,
+.track-tab.active {
+  background: #2ac0e5;
+  color: #000;
+  box-shadow: 0 0 20px #2ac0e5aa;
+}
+
+.track-tab .amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.track-tab .label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.track-tab.view-all {
+  margin-top: auto;
+  background: #1a1a1a;
+  color: #5ee5ff;
+}
+
+/* Right Panel */
+.track-details {
+  flex: 2;
+  background: linear-gradient(180deg, #1c1c2e, #0f0f1a);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 40px #2ac0e522;
+  border: 1px solid #2ac0e5;
+  position: relative;
+}
+
+.track-name {
+  font-size: clamp(1.2rem, 4vw, 1.75rem); /* responsive */
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.track-desc {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.track-details hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background-color: #2ac0e5;
+  opacity: 0.2;
+}
+
+.track-prize .label {
+  font-size: 0.9rem;
+  color: #2ac0e5;
+  margin-bottom: 0.25rem;
+}
+
+.track-prize .amount {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.track-prize .desc {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  opacity: 0.85;
+}
+
+.devfolio-link {
+  margin-top: 2rem;
+}
+
+.devfolio-link button {
+  background: transparent;
+  color: #2ac0e5;
+  border: 1px solid #2ac0e5;
+  padding: 0.5rem 1.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.devfolio-link button:hover {
+  background-color: #2ac0e5;
+  color: #000;
+  box-shadow: 0 0 10px #2ac0e5;
+}
+
+/* ===============================
+   Responsive Media Queries
+================================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .tracks-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .tracks-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .track-tab {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 150px;
+  }
+
+  .track-details {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .tracks-section {
+    padding: 2rem 1rem;
+  }
+
+  .tracks-sidebar {
+    flex-direction: column;
+  }
+
+  .track-tab {
+    flex: 1 1 100%;
+  }
+
+  .track-details {
+    padding: 1rem;
+  }
+
+  .track-name {
+    font-size: 1.3rem;
+  }
+
+  .track-desc {
+    font-size: 0.9rem;
+  }
+
+  .track-prize .desc {
+    font-size: 0.9rem;
+  }
+}

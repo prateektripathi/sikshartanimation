@@ -1,0 +1,1021 @@
+/* ===============================
+   Base Styles
+=============================== */
+.event-wrapper {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* ===============================
+   Buttons
+=============================== */
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: skyblue;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: skyblue;
+  color: #000;
+  padding: 12px 24px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #00aaff;
+  color: #fff;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+  .btn-back {
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .btn-primary {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-back {
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ===============================
+   Hero Section
+=============================== */
+.hero-section {
+  position: relative;
+  height: 350px;
+  border-radius: 16px;
+  background: url("/src/assets/hero-illustration.jpg") center/cover no-repeat;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.tag {
+  background: skyblue;
+  color: black;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.hero-side {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  text-align: right;
+  color: skyblue;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+/* ✅ Responsive for tablets and phones */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 380px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .hero-layer {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+
+  .hero-side {
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 220px;
+    border-radius: 10px;
+  }
+
+  .hero-layer {
+    padding: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+.hero-text p{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.7rem;
+}
+  .tag {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+
+  .hero-side {
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ===============================
+   Info Section
+=============================== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.info-box .icon {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  background: rgba(0, 200, 255, 0.1);
+  border-radius: 8px;
+  color: #00f2fe;
+  flex-shrink: 0;
+}
+
+.info-box .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4facfe;
+  margin-bottom: 4px;
+}
+
+.info-box p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #ddd;
+}
+
+/* ===============================
+   Call to Action Section
+=============================== */
+.cta-box {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 50px;
+  border-radius: 16px;
+  background: linear-gradient(to right, rgba(135, 206, 235, 0.1), rgba(135, 206, 250, 0.2));
+}
+.cta-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: skyblue;
+}
+
+/* ===============================
+   Benefits Section
+=============================== */
+.benefits-section {
+  padding: 60px 20px;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
+}
+
+.benefits-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeDown 1s ease-in-out;
+}
+
+/* Grid Layout */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablets */
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Mobiles */
+    gap: 18px;
+  }
+}
+
+/* Box Style */
+.benefit-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.benefit-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #4facfe;
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.25);
+}
+
+/* Icon Style */
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 18px rgba(79, 172, 254, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.benefit-box:hover .benefit-icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+
+/* Text */
+.benefit-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.benefit-box p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-section h2 {
+    font-size: 1.8rem;
+  }
+  .benefit-box {
+    padding: 20px;
+  }
+  .benefit-box h3{
+    font-size: 1.2rem;
+  }
+}
+
+/* ===============================
+   Timeline Section
+=============================== */
+/* ===============================
+   Timeline Section
+=============================== */
+.timeline-section {
+  background-color: #000000;
+  padding: 4rem 2rem;
+  color: #ffffff;
+ 
+}
+
+.timeline-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-section h2::before {
+  content: '';
+  display: none; /* old yellow glow remove */
+}
+
+/* Timeline Container */
+.timeline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end; /* move cards to right side */
+}
+
+/* Each Step */
+.timeline-step {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #4facfe;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 80%;
+  transition: all 0.3s ease;
+}
+
+.timeline-step:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.25);
+  border-left-color: #00f2fe;
+}
+
+/* Step Number */
+.step-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4facfe;
+  margin-bottom: 0.5rem;
+}
+
+/* Step Content */
+.step-text h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.step-text .date {
+  font-size: 0.95rem;
+  color: #aee0ff;
+  margin-bottom: 0.4rem;
+}
+
+.step-text p {
+  color: #d0eaff;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-grid {
+    align-items: center;
+  }
+
+  .timeline-step {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   Prize Section
+=============================== */
+.prize-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: skyblue;
+}
+
+.prize-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.prize-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-lg {
+  width: 200px;
+  height: 200px;
+  color: skyblue;
+}
+
+.prize-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: skyblue;
+}
+/* Responsive: Timeline Section */
+@media (max-width: 1024px) {
+  .timeline-grid {
+    align-items: center;
+  }
+
+  .timeline-step {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .step-number {
+    font-size: 1.6rem;
+  }
+
+  .step-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .step-text .date,
+  .step-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-step {
+    padding: 1rem;
+    border-left-width: 3px;
+  }
+
+  .step-number {
+    font-size: 1.4rem;
+  }
+
+  .step-text h3 {
+    font-size: 1rem;
+  }
+
+  .step-text .date,
+  .step-text p {
+    font-size: 0.85rem;
+  }
+}
+/* Responsive: Prize Section */
+@media (max-width: 900px) {
+  .prize-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .prize-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icon-lg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .amount {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .prize-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .icon-lg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .amount {
+    font-size: 1.2rem;
+  }
+}
+/* ===============================
+   Conducted By Section
+=============================== */
+.conducted-by-section {
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.conducted-by-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #22d3ee;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Grid container */
+.conducted-by-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .conducted-by-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .conducted-by-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .conducted-by-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* College Card */
+.college-card {
+  background-color: #121212;
+  border-left: 4px solid #22d3ee;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px rgba(34, 211, 238, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.college-card:hover {
+  box-shadow: 0 10px 20px rgba(34, 211, 238, 0.4);
+  transform: translateY(-5px);
+}
+
+/* College Card Heading */
+.college-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #22d3ee;
+  margin-bottom: 0.75rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* College Info Paragraphs */
+.college-card p {
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.college-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong labels */
+.college-card strong {
+  color: #22d3ee;
+}
+
+/* Links */
+.college-card a {
+  color: #9ca3af;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.college-card a:hover {
+  color: #38bdf8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .conducted-by-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .college-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .conducted-by-section h2 {
+    font-size: 2rem;
+  }
+
+  .conducted-by-grid {
+    grid-template-columns: 1fr; /* single column on smaller screens */
+    gap: 1.5rem;
+  }
+
+  .college-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .conducted-by-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .college-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .college-card p {
+    font-size: 0.85rem;
+  }
+
+  .college-card {
+    padding: 0.8rem;
+  }
+}
+/* ===============================
+   Extra Small Devices (<= 400px)
+=============================== */
+@media (max-width: 400px) {
+
+  /* Hero Section */
+  .hero-section {
+    height: 220px;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+  }
+
+  .hero-side {
+    font-size: 1rem;
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Info Section */
+  .info-grid {
+    margin: auto;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .info-box {
+    text-align: center;
+    padding: 12px 15px;
+  }
+
+  .info-box .icon {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+  }
+
+  .info-box .title {
+    font-size: 0.85rem;
+  }
+
+  .info-box p {
+    font-size: 0.8rem;
+  }
+
+  /* Call to Action Section */
+  .cta-box {
+    padding: 25px 15px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Benefits Section */
+
+
+  .benefit-box {
+    padding: 15px;
+  }
+
+  .benefit-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-box p {
+    font-size: 0.85rem;
+  }
+
+  .benefit-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Timeline Section */
+  .timeline-section {
+    padding: 2rem 0.8rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-step {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-left-width: 2px;
+  }
+
+  .step-number {
+    font-size: 1.2rem;
+  }
+
+  .step-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .step-text .date,
+  .step-text p {
+    font-size: 0.75rem;
+  }
+
+  /* Prize Section */
+  .prize-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .prize-box {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .icon-lg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .amount {
+    font-size: 1rem;
+  }
+
+  /* Conducted By Section */
+  .conducted-by-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .conducted-by-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .college-card {
+    padding: 0.6rem;
+  }
+
+  .college-card h3 {
+    font-size: 1rem;
+  }
+
+  .college-card p {
+    font-size: 0.75rem;
+  }
+}
+/* ===============================
+   Extra Small Devices (<= 400px) Button Adjustment
+=============================== */
+@media (max-width: 400px) {
+  .btn-primary {
+    padding: 8px 16px; /* chhota padding */
+    font-size: 0.85rem; /* font size chhota */
+  }
+}
+/* ===============================
+   Jury Members Section - Card Format
+=============================== */
+.jury-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  color: #ffffff;
+  border-radius: 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.jury-section h2 {
+
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  align-self:center;
+}
+
+.jury-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.jury-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00f2fe;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jury-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
+}
+
+.jury-card strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #00f2fe;
+  margin-bottom: 4px;
+}
+
+.jury-card span {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 768px) {
+  .jury-section {
+    align-items: center;
+  }
+
+  .jury-section h2 {
+    align-self: center;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .jury-list {
+    width: 100%;
+  }
+
+  .jury-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .jury-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .jury-section h2 {
+ text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #22d3ee;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+  font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .jury-card {
+    padding: 0.9rem 1rem;
+  }
+
+  .jury-card strong {
+    font-size: 1rem;
+  }
+
+  .jury-card span {
+    font-size: 0.85rem;
+  }
+}

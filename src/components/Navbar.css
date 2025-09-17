@@ -1,0 +1,126 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: #00ffff;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.nav-links li {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #00ffff;
+}
+
+.register-btn {
+  border: 1px solid #00ffff;
+  background: transparent;
+  padding: 10px 20px;
+  color: #00ffff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Menu Icon */
+/* Menu Icon (default) */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #00ffff;
+  cursor: pointer;
+  z-index: 1100; /* हमेशा ऊपर रहे */
+}
+
+/* Mobile screen पर */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    position: fixed; /* हमेशा fixed रहे */
+    top: 20px;       /* ऊपर से gap */
+    right: 25px;     /* दाएं corner */
+  }
+}
+
+
+/* Mobile Auth */
+.mobile-auth {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #00ffff;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+/* Menu Icon (default navbar position) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #00ffff;
+  cursor: pointer;
+  z-index: 1100; /* keep above everything */
+}
+
+/* When inside menu (menu open) */
+.menu-icon.inside-menu {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+}

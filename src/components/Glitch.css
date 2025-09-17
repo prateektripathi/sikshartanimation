@@ -1,0 +1,65 @@
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  /* 👇 Removed the main skew animation */
+  /* animation: glitch-skew 0.8s infinite ease-in-out alternate; */
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.glitch-text::before {
+  color: #00ffff;
+  z-index: -1;
+  /* 👇 Removed movement from before animation */
+  animation: glitch-anim-static 1.2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  color: #ff00ff;
+  z-index: -2;
+  /* 👇 Removed movement from after animation */
+  animation: glitch-anim-static 1s infinite linear alternate-reverse;
+}
+
+/* Optional — you can delete glitch-skew if not used anywhere */
+@keyframes glitch-skew {
+  0%, 100% {
+    transform: skew(0deg);
+  }
+}
+
+/* 🔄 New static version of glitch animation (no movement) */
+@keyframes glitch-anim-static {
+  0% {
+    clip-path: inset(0 0 90% 0);
+  }
+  25% {
+    clip-path: inset(10% 0 80% 0);
+  }
+  50% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  75% {
+    clip-path: inset(30% 0 30% 0);
+  }
+  100% {
+    clip-path: inset(40% 0 0 0);
+  }
+}
+.footerwords:hover{
+font-style: italic;
+font-family: serif;
+letter-spacing: 4px;
+-webkit-text-stroke: 1px white;
+color: transparent;
+cursor: none;
+}

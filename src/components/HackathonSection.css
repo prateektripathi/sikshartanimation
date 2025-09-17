@@ -1,0 +1,130 @@
+.events-container {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.events-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #fff;
+  color: #000;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.event-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.card-front h3 {
+  margin: 10px 0;
+}
+
+/* UPDATED event-tags: left and right aligned */
+.event-tags {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  color: #ccc;
+}
+
+.card-back {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  margin: 10px 0 20px;
+}
+
+.register-btn {
+  background-color: #06bcee;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover:not(:disabled) {
+  background-color: #0288c7;
+}
+
+.register-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

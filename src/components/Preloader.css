@@ -1,0 +1,68 @@
+/* src/styles/preloader.css */
+
+.preloader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+
+.preloader-content {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.preloader-counter {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0ff;
+  letter-spacing: 2px;
+  animation: pulse 1s infinite alternate;
+}
+
+.preloader-text {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Shake animation is handled via gsap */
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* Loading Bar Styles */
+.loading-bar-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 8px;
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffff, #0066ff);
+  transition: width 0.2s ease;
+  border-radius: 10px;
+}

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+/* ===== CONTAINER SETUP ===== */
+
+.registration-form-container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ===== BUBBLES ===== */
+
+.bubble {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #ff6ec7 20%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== FORM STYLES ===== */
+
+.hackathon-form {
+  width: 90vw;
+  height: 80vh;
+  max-width: 1000px;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #6fd0ff55;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 20px #8a5cff44, inset 0 0 10px #6fd0ff22;
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+.hackathon-form::-webkit-scrollbar {
+  width: 10px;
+}
+
+.hackathon-form::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.hackathon-form::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6fd0ff, #8a5cff);
+  border-radius: 10px;
+  box-shadow: 0 0 6px #6fd0ff88;
+  border: 2px solid #111;
+}
+
+.hackathon-form::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8a5cff, #6fd0ff);
+}
+
+/* Firefox scrollbar */
+.hackathon-form {
+  scrollbar-width: thin;
+  scrollbar-color: #6fd0ff22 transparent;
+}
+
+/* ===== HEADINGS ===== */
+
+.hackathon-form h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #8a5cff, #6fd0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px #6fd0ff99;
+}
+
+/* ===== FORM INPUT STYLES ===== */
+
+.hackathon-form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #6fd0ff;
+}
+
+.hackathon-form input,
+.hackathon-form textarea,
+.hackathon-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #6fd0ff55;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.hackathon-form input:focus,
+.hackathon-form textarea:focus,
+.hackathon-form select:focus {
+  outline: none;
+  border-color: #8a5cff;
+  box-shadow: 0 0 8px #8a5cffaa;
+}
+
+/* Group two fields side-by-side */
+.small-inputs {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 45%;
+}
+
+/* ===== BUTTON STYLES ===== */
+
+.hackathon-form button {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #8a5cff, #6fd0ff);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 0 15px #8a5cff88;
+  transition: all 0.3s ease;
+}
+
+.hackathon-form button:hover {
+  box-shadow: 0 0 25px #6fd0ffcc;
+}
+
+/* ===== CHECKBOX GROUP ===== */
+
+.checkbox-group {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: #6fd0ff;
+}
+
+.checkbox-group #agree_to_terms {
+  width: 16px;
+  height: 16px;
+  accent-color: #6fd0ff;
+}
+
+/* ===== TEAM MEMBER SECTION ===== */
+
+.team-section {
+  margin-top: 30px;
+  border-top: 1px solid #6fd0ff33;
+  padding-top: 20px;
+}
+
+.team-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #6fd0ff;
+}
+
+.team-member {
+  border: 1px solid #6fd0ff22;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.team-member h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #8a5cff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .hackathon-form {
+    width: 95vw;
+    height: 90vh;
+    padding: 30px 20px;
+  }
+
+  .hackathon-form h2 {
+    font-size: 2rem;
+  }
+
+  .hackathon-form input,
+  .hackathon-form textarea,
+  .hackathon-form select {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .hackathon-form button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .small-inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hackathon-form {
+    padding: 20px 15px;
+  }
+
+  .hackathon-form h2 {
+    font-size: 1.7rem;
+  }
+
+  .hackathon-form label {
+    margin-top: 16px;
+  }
+
+  .hackathon-form input,
+  .hackathon-form textarea,
+  .hackathon-form select {
+    font-size: 0.9rem;
+  }
+
+  .hackathon-form button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .team-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-member h4 {
+    font-size: 1rem;
+  }
+}
