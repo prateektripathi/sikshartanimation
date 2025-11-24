@@ -1,100 +1,72 @@
-// src/components/Chatbot.jsx
-import React, { useState, useEffect, useRef } from "react";
-import { io } from "socket.io-client";
-import "./Chatbot.css"; // apni CSS file yahan import karo
-
-const TypingIndicator = () => {
-  return (
-    <div className="typing-indicator">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  );
-};
+import React from "react";
+import "./Chatbot.css";
 
 const Chatbot = () => {
-  const [messages, setMessages] = useState([]); // { sender, text }
-  const [options, setOptions] = useState([]);
-  const [input, setInput] = useState("");
-  const [isTyping, setIsTyping] = useState(false); // new state
-  const chatRef = useRef(null);
-  const socketRef = useRef(null);
-
-  // socket connection
-  useEffect(() => {
-    socketRef.current = io("https://socketbot-4gz0.onrender.com");
-
-    socketRef.current.on("bot-message", (msg) => {
-      setIsTyping(false); // stop typing indicator
-      setMessages((prev) => [...prev, { sender: "bot", text: msg }]);
-      setOptions([]); // clear options
-    });
-
-    socketRef.current.on("options", (opts) => {
-      setOptions(opts);
-    });
-
-    // cleanup on unmount
-    return () => {
-      if (socketRef.current) socketRef.current.disconnect();
-    };
-  }, []);
-
-  // scroll to bottom when new message aata hai
-  useEffect(() => {
-    if (chatRef.current) {
-      chatRef.current.scrollTop = chatRef.current.scrollHeight;
-    }
-  }, [messages, isTyping]);
-
-  const sendMessage = (msg) => {
-    if (!msg.trim()) return;
-    setMessages((prev) => [...prev, { sender: "user", text: msg }]);
-    setInput("");
-    setOptions([]);
-    setIsTyping(true); // show typing indicator
-    if (socketRef.current) {
-      socketRef.current.emit("user-message", msg);
-    }
-  };
-
   return (
-    <div className="chatbot-container">
-      <div className="blob blob1"></div>
-      <div className="blob blob2"></div>
-      <h2>ShikshaArt Hackathon Chatbot</h2>
-      <div id="container">
-        <div id="chat" ref={chatRef}>
-          {messages.map((m, i) => (
-            <div key={i} className={`msg ${m.sender}`}>
-              {m.text}
-            </div>
-          ))}
-          {isTyping && <TypingIndicator />}
-        </div>
+    <div className="page-wrapper">
+      <div className="text-panel">
+        <h1>Sikksha AI</h1>
 
-        <div id="options">
-          {options.map((opt, i) => (
-            <button key={i} onClick={() => sendMessage(opt)}>
-              {opt}
-            </button>
-          ))}
-        </div>
+        <p>
+          Cognitive Intelligence is within reach.
+          Building a unified cognitive intelligence layer for India is one of the
+          most important technical problems of our era.
+          <br /><br />
 
-        <div id="inputArea">
-          <input
-            type="text"
-            id="msgInput"
-            placeholder="Type message..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
-          />
-          <button className="sendBtn" onClick={() => sendMessage(input)}>
-            Send
-          </button>
-        </div>
+          We have started the country’s first straight-shot Cognitive Systems Lab,
+          with one goal and one product: an intelligence engine that can understand
+          how humans learn, think, and build — and upgrade it.
+          <br /><br />
+
+          It’s called Sikksha AI. Cognitive intelligence is our mission, our name,
+          and our entire product roadmap, because it is our sole focus.
+          <br /><br />
+
+          Our team, partners, and research model are aligned around a single idea:
+          <br />
+          <strong>&gt; India cannot leap into an AI-first world without rebuilding
+          the way humans learn.</strong>
+          <br /><br />
+
+          We approach cognition, capability, and behaviour as engineering
+          challenges — problems solvable through breakthroughs in AI, simulation,
+          reasoning architectures, and cognitive science.
+          <br /><br />
+
+          We advance capabilities rapidly while ensuring precision, safety, and
+          rigour remain ahead. That is how we scale with clarity instead of chaos.
+          <br /><br />
+
+          Our singular focus means no distractions from generic EdTech cycles,
+          commercial shortcuts, or outdated academic structures.
+          <br /><br />
+
+          Our research model ensures depth, stability, and long-term progress —
+          insulated from short-term noise.
+          <br /><br />
+
+          We are an Indian deep-tech research company with roots across Lucknow,
+          Bengaluru, and emerging partnerships with global cognitive labs.
+          <br /><br />
+
+          This gives us access to young talent, rigorous researchers, and the rare
+          ability to build frontier-grade intelligence systems inside India.
+          <br /><br />
+
+          We are assembling a lean, obsessed team of Data Science engineers,
+          cognitive scientists, ML researchers, psychologists, and simulation
+          architects dedicated to one problem and one problem only:
+          <br />
+          <strong>&gt; Rebuilding the cognitive engine of a nation.</strong>
+          <br /><br />
+
+          If that is the challenge you’ve been waiting for, we offer the opportunity
+          to do your life’s most meaningful work — and to help solve one of the
+          defining technical problems of this century.
+          <br /><br />
+
+          Now is the moment. Join us.
+        </p>
       </div>
     </div>
   );
