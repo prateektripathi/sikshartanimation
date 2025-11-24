@@ -71,7 +71,6 @@ const Chatbot = () => {
               {m.text}
             </div>
           ))}
-
           {isTyping && <TypingIndicator />}
         </div>
 
